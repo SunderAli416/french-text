@@ -106,7 +106,67 @@ The project utilizes several NLP techniques and libraries, including:
 - scikit-learn for machine learning tasks.
 - Keras for building neural network models.
 
-  ### A validation accuracy of 57.2 was acquired using this methodology on the kaggle submission
+### A validation accuracy of 57.2 was acquired using this methodology on the kaggle submission
+
+# Inference for the CNN model using streamlit
+
+
+## Inference Methodology
+The inference process involves several key steps:
+
+### 1. Text Preprocessing
+- Input text is initially cleaned by converting it to lowercase and removing non-alphabetic characters.
+
+### 2. Tokenization and Encoding
+- The input text is tokenized and encoded using the CamemBERT tokenizer.
+- The CamemBERT model for sequence classification is loaded from a pre-trained checkpoint.
+- The encoded input is prepared for model inference, including moving it to the GPU (if available).
+
+### 3. Feature Extraction
+- BERT embeddings are extracted from the encoded input.
+- The last hidden states of the BERT model are used for feature extraction.
+- Mean pooling is applied to obtain feature vectors for the text.
+
+### 4. Additional Features
+- POS (Part-of-Speech) tags are extracted from the text using spaCy.
+- One-hot encoding is applied to the POS tags to create additional features.
+- Features such as the number of words and average word length are calculated.
+
+### 5. Scaling
+- The feature vectors are scaled using a Min-Max scaler.
+- The scaler is loaded from a saved file.
+
+### 6. Model Loading
+- The trained classification model (in this case, a TensorFlow/Keras model) is loaded.
+- The model architecture and weights are restored.
+
+### 7. Inference
+- The preprocessed and scaled feature vectors are passed through the loaded model for inference.
+- The output represents the predicted category or label.
+
+### 8. Label Transformation
+- The predicted output is inverse-transformed using label encoders.
+- The final predicted label is obtained.
+
+## Usage
+1. Clone this repository to your local machine.
+2. Ensure you have the required libraries installed by using `pip install -r requirements.txt`.
+3. Prepare your input text for classification.
+4. Run the `ui.py` script using Streamlit by executing `streamlit run ui.py`.
+5. Enter your text in the provided input field and click the "Classify" button.
+6. The predicted category or label will be displayed.
+
+## Files Required
+To perform inference, the following files are required:
+
+- Pre-trained CamemBERT checkpoint (e.g., `camembert-base`).
+- TensorFlow/Keras model for text classification.
+- Min-Max scaler (saved as `minmax_scaler.pkl`).
+- Label encoder (saved as `label_encoder.pkl`).
+- One-hot encoder (saved as `one_hot_encoder.pkl`).
+
+
+
 
 
 
