@@ -58,24 +58,57 @@ Here are the confusion matrices for each model with 4000 features:
 #### RandomForestClassifier (4000 Features)
 ![RandomForestClassifier Confusion Matrix](https://github.com/SunderAli416/french-text/blob/main/random_forest.png)
 
-### Erroneous Predictions
-Examples of incorrect predictions:
+# Natural Language Processing for Text Difficulty Classification Using Convolutional Neural Networks
 
-1. **Example 1:**
-   - Sentence: "..."
-   - True Label: ...
-   - Predicted Label: ...
-   - Possible Reason: ...
 
-2. **Example 2:**
-   - Sentence: "..."
-   - True Label: ...
-   - Predicted Label: ...
-   - Possible Reason: ...
+
+## Methodology
+The project's methodology can be broken down into several key steps:
+
+### Data Preprocessing
+- Data is loaded from a CSV file (`training_data.csv`).
+- Text data is cleaned by converting it to lowercase and removing special characters, leaving only alphabetic characters.
+- Part-of-speech (POS) tags are extracted from the text using spaCy.
+- One-hot encoding is applied to the POS tags to create features.
+- BERT embeddings are extracted from the text using a pre-trained CamemBERT model.
+- Additional features such as the number of words and average word length are calculated.
+
+### Machine Learning Models
+#### Support Vector Machine (SVM)
+- A Support Vector Machine (SVM) model is trained using a grid search approach to find the best hyperparameters.
+- The SVM model is trained on the combined set of features.
+
+#### Convolutional Neural Network (CNN)
+- A Convolutional Neural Network (CNN) is designed to process text data.
+- The CNN model architecture includes convolutional layers, max-pooling layers, and dense layers.
+- The model is trained on the combined set of features.
+
+### Tokenization and Embedding
+- Tokenization and encoding of text data are performed using the CamemBERT tokenizer.
+- BERT embeddings are extracted from the tokenized text data.
+
+### Model Training and Evaluation
+- The SVM model is trained and evaluated using cross-validation and classification report metrics.
+- The CNN model is trained using early stopping, model checkpointing, and learning rate reduction techniques.
+- Training and evaluation results are stored in the `test_trainer` directory.
+
+### Inference and Submission
+- The trained CamemBERT model is used to make predictions on unlabelled test data (`unlabelled_test_data.csv`).
+- Predicted difficulty levels are inverse-transformed and saved in a CSV file (`submission_2.csv`).
+
+## Techniques and Libraries
+The project utilizes several NLP techniques and libraries, including:
+- Tokenization and embeddings with CamemBERT.
+- Support Vector Machine (SVM) for classification.
+- Convolutional Neural Network (CNN) for text classification.
+- spaCy for POS tagging.
+- Transformers library for pre-trained models.
+- scikit-learn for machine learning tasks.
+- Keras for building neural network models.
+
+  ### A validation accuracy of 57.2 was acquired using this methodology on the kaggle submission
+
+
+
   
-3. **Example 3:**
-   - Sentence: "..."
-   - True Label: ...
-   - Predicted Label: ...
-   - Possible Reason: ...  
 
