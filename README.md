@@ -47,16 +47,16 @@ The best-performing model was **Logistic Regression** with 4000 features, achiev
 Here are the confusion matrices for each model with 4000 features:
 
 #### Logistic Regression (4000 Features)
-![Logistic Regression Confusion Matrix](https://github.com/SunderAli416/french-text/blob/main/logistic_regression.png)
+![Logistic Regression Confusion Matrix](https://github.com/SunderAli416/french-text/blob/main/images/logistic_regression.png)
 
 #### K-Neighbors Classifier (4000 Features)
-![K-Neighbors Classifier Confusion Matrix](https://github.com/SunderAli416/french-text/blob/main/knn.png)
+![K-Neighbors Classifier Confusion Matrix](https://github.com/SunderAli416/french-text/blob/main/images/knn.png)
 
 #### Decision Tree Classifier (4000 Features)
-![Decision Tree Classifier Confusion Matrix](https://github.com/SunderAli416/french-text/blob/main/decision_tree.png)
+![Decision Tree Classifier Confusion Matrix](https://github.com/SunderAli416/french-text/blob/main/images/decision_tree.png)
 
 #### RandomForestClassifier (4000 Features)
-![RandomForestClassifier Confusion Matrix](https://github.com/SunderAli416/french-text/blob/main/random_forest.png)
+![RandomForestClassifier Confusion Matrix](https://github.com/SunderAli416/french-text/blob/main/images/random_forest.png)
 
 # Natural Language Processing for Text Difficulty Classification Using Convolutional Neural Networks
 
