@@ -1,6 +1,21 @@
 
 # Text Classification Model Analysis
 
+## Project File Index
+
+### Camembert Embeddings
+- [embeddings_french.ipynb](https://github.com/SunderAli416/french-text/blob/main/camambert/embeddings_french.ipynb): A Jupyter notebook for fine-tuning the Camembert model on French text data.
+- [embeddings_french.py](https://github.com/SunderAli416/french-text/blob/main/camambert/embeddings_french.py): Python code for the fine-tuning process of the Camembert model.
+- [submission.csv](https://github.com/SunderAli416/french-text/blob/main/camambert/submission.csv): CSV file containing submission data for Kaggle competitions.
+
+### Machine Learning Models
+- [Machine_Learning_Models.ipynb](https://github.com/SunderAli416/french-text/blob/main/notebooks/Machine_Learning_Models.ipynb): Jupyter notebook detailing non-deep learning methods and their evaluation for text classification.
+
+### Streamlit Inference
+- [FrenchClassification.py](https://github.com/SunderAli416/french-text/blob/main/streamlit_inference/FrenchClassification.py): Python script for deploying a Streamlit UI for model inference.
+
+
+
 ## Overview
 This project explores various machine learning models for text classification. We compare Logistic Regression, K-Nearest Neighbors, Decision Tree, and Random Forest classifiers across different feature set sizes to determine the most effective approach.
 
