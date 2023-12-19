@@ -168,6 +168,20 @@ To perform inference, the following files are required:
 
 
 
+# UI
+
+## Streamlit based UI for Classification
+
+The application features a user-friendly interface built using Streamlit, a powerful tool for building interactive and visually appealing web apps for machine learning and data science projects. Our UI simplifies the user interaction with the classification model, allowing for easy input, processing, and visualization of results.
+
+Key features of the UI include:
+- **Text Input Field:** Where users can enter or paste the text they wish to classify.
+- **Submit Button:** To send the text for processing by the classification model.
+- **Results Display:** Shows the classification results in an understandable format.
+
+![Screenshot of Streamlit UI](https://github.com/SunderAli416/french-text/blob/main/images/UI.png)
+
+
 
 
   
